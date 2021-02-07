@@ -1,59 +1,102 @@
-:root{
-    --rowNum: 4;
-    --colNum: 4;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
 
 body{
-    display: flex;
-    flex-direction: column;
     height: 100vh;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+    background-color:rgba(0, 0, 0, 0.459);
     margin: 0;
-    overflow: visible;
+    font-family: "Cairo", sans-serif;
+    overflow: hidden;
 }
 
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+}
 #container{
+    position: relative;
     display: grid;
-    max-width: auto;
-    max-height: auto;
-    overflow: hidden;
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+    background-color: #fff;
     border-style: solid;
     border-width: 5px;
-    border-color: gray;
+    border-color: #000;
+    cursor:cell;
 }
 
 .block{
-    transition-duration: 0.5s;
-    height: 80px;
-    width: 80px;
-    background-color: #fff;
+    transition-duration: 300ms;
+}
+
+#color{
+    background-color: #d4d3d3;
+    border-style: none;
+    outline: none;
+}
+
+
+#customisers{
+    float: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    position: relative;
+    bottom: 710px;
+    left: 380px;
+    background-color: rgb(172, 56, 56);
+    height: 690px;
+    width: 180px;
+}
+
+@media (max-width: 1800px){
+    #customisers{
+        height: 490px;
+        width: 100px;
+        margin-left: -320px;
+        margin-top: 200px;
+    }
+    #container{
+        width: 500px;
+        height: 500px;
+    }
+
+}
+
+.sections{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.3rem;
 }
 
 .clear-btn{
+    align-self: center;
     width: 80px;
     height: 30px;
-    margin-top: 10px;
-    border-color: grey;
-    border-width: 3px;
-    border-style: solid;
     border-radius: 20px;
+    border-style: none;
     background-color: #000;
     color: #fff;
-    font-size: 1.2rem;
-}
-.clear-btn:hover{
-    transform: scale(1.05);
-}
-.clear-btn:focus{
+    text-align: center;
+    font-family: inherit;
     outline: none;
+} 
+
+.clear-btn:hover, #color:hover{
+    transform: scale(1.05);
 }
 
 .slider{
-    background-color: #fff;
     outline: none;
 }
+
+
+
+
 
 
 
