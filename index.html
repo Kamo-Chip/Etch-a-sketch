@@ -6,12 +6,30 @@
         <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
+        <h1>Etch-A-Sketch</h1>
         <div id = "container">
         </div>
-        <div class = "slidcontainer">
-            <label for="range">Adjust grid size</label>
-            <input type="range" min = "4" max = "8" value = "4" class = "slider" id = "range">
+        <div id = "customisers">
+            <div class = "sections">
+                <label for = "color">Change color:</label>
+                <input type = "color" id = "color">
+            </div>
+            <div class = "sections">
+                <label for = "rainbow">Rainbow:</label>
+                <input type ="checkbox" id = "rainbow" name = "rain-erase">
+            </div>
+            <div class = "sections">
+                <label for = "erase">Erase:</label>
+                <input type = "checkbox" id = "erase" name = "rain-erase">
+            </div>
+            <div class = "sections">
+                <label for="range">Adjust grid size</label>
+                <input type="range" min = "4" max = "64" value = "4" class = "slider" id = "range">
+            </div>
+    
+            <button type ="button" class = "clear-btn">Clear</button>
         </div>
+       
     </body>
     <script src = "script.js"></script>
 </html>
