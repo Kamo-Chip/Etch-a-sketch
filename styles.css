@@ -3,7 +3,7 @@
 
 body{
     height: 100vh;
-    background-color:rgba(0, 0, 0, 0.459);
+    background-image: linear-gradient(160deg, rgb(255, 0, 221), rgb(0, 225, 255));
     margin: 0;
     font-family: "Cairo", sans-serif;
     overflow: hidden;
@@ -46,7 +46,7 @@ h1{
     position: relative;
     bottom: 710px;
     left: 380px;
-    background-color: rgb(172, 56, 56);
+    background-color: rgba(255, 0, 0, 0.452);
     height: 690px;
     width: 180px;
 }
@@ -61,6 +61,9 @@ h1{
     #container{
         width: 500px;
         height: 500px;
+    }
+    #range{
+        width: 5vw;
     }
 
 }
