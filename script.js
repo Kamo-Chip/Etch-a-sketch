@@ -30,22 +30,27 @@ function initialise(gridNumber){
 } 
 
 function rainbowColor(){
-    let randomColor = "#"+Math.floor(Math.random()*16777215).toString(16);
+    let randomColor = "#"+Math.floor(Math.random()*16600000).toString(16);
     return randomColor;
 }
+
+rainbow.addEventListener("click",changeColor);
 
 function changeColor(e){
     if(e.target.style.backgroundColor == "" || e.target.style.backgroundColor == "rgb(255, 255, 255)"){
         if(rainbow.checked == true){
+            erase.checked = false;
             e.target.style.backgroundColor = rainbowColor();
         }else{
             e.target.style.backgroundColor = colorPick.value;
         }
     }
+    
 }
 
 function eraseBlock(e){
     e.target.style.backgroundColor = "#fff";
+    rainbow.checked = false;
 }
 
 window.addEventListener("mouseover", function(e){
